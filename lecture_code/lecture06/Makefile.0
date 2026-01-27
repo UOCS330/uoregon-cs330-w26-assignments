@@ -1,0 +1,11 @@
+lecture: lecture05.o arithmetic.o
+	gcc -o lecture lecture05.o arithmetic.o
+
+lecture05.o: lecture05.c 
+	gcc -c lecture05.c
+
+arithmetic.o: arithmetic.c arithmetic.h
+	gcc -c arithmetic.c
+
+clean:
+	rm lecture lecture05.o arithmetic.o

@@ -1,0 +1,17 @@
+sources =  lecture05.c arithmetic.c
+objects =  lecture05.o arithmetic.o
+
+
+# $^ is an automatic variable that names all the pre-reqs, with spaces between
+# them
+# $@ is the file name of the target of the rule
+lecture: $(objects)
+	gcc $^ -o $@
+
+# %.o refers to files that is of type .o
+# $< refers to the first pre-req
+%.o : %.c
+	gcc -c $< -o $@
+
+clean:
+	rm lecture $(objects)
