@@ -1,0 +1,33 @@
+# extra02
+Extra Credit Homework 02 - Parallelizing Quicksort
+
+0. READ THE INSTRUCTIONS BELOW COMPLETELY AND CAREFULLY BEFORE PROCEEDING.
+
+0.1 THE CLASS LECTURE ON PARALLEL PARTITIONING HAS MORE DETAILS ON HOW THEY WORK. READ IT BEFORE PROCEEDING.
+
+
+Introduction
+
+1. In this assignment you will be implementing
+
+    a) a regular quick sort algorithm that uses swap to implement the partitioning stage
+
+    b) a parallel quick sort algorithm that uses a prefix sum
+
+2. This time, the declaration for the required classes are provided. These must not be changed, and your implementation must follow them.
+
+3. Some of the functions for the class has already been implemented for you. You only need to fill in the functions with the "TODO" in numlist.cc (try "grep TODO *"). DO NOT CHANGE THE PROVIDE SKELETON CODE OR ADD NEW FUNCTIONS.
+
+4. Implement the two functions and verify that your code works correctly. Use the provided output files to compare your answer.
+
+    a) For example, your code should produce the same output as in the file 
+
+        unittest_ans_t11111_s111_ypar.txt
+
+       when you execute your code with ./mysort -t 11111 -s 111 -y par -o <your output file name>
+
+5. Your code should work beyond the provided unit tests. That is, even if it does work for all the given tests, if the code has an identifiable bug (i.e., by reading the source code), points WILL be deducted.
+
+6. Your code MUST work with any number of OpenMP threads from 1 ~ 32 on ix-dev.
+
+7. As before, complete the homework, and push to GitHub. If you do not push to GitHub, the TA and I cannot see the code, and it will be considered a late assignment (i.e., not graded).
